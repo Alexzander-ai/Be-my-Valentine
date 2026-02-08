@@ -155,9 +155,26 @@ document.addEventListener("click", () => {
 
 let noClicks = 0;
 const messages = [
-  "No 😭","Please 🥺","Don’t 😫","Babe 😢",
-  "No 😭","Say yes 🥺","I beg u 😫","Babe 😢",
-  "I'd die 😭","Please 🥺","Ughhh😒🙄😡"
+  "No 😭",
+  "Please 🥺",
+  "Don’t 😫",
+  "Babe 😢",
+  "Nooo 😭",
+  "Say yes 🥺",
+  "I beg u 😫",
+  "Babe 😢",
+  "I'd die 😭",
+  "Please 🥺",
+  "On my knees 🧎‍♂️😭",
+  "Baby 😭",
+  "Tell me yes 🥺",
+  "Just yes 😢",
+  "My heart 💔",
+  "Why noo 😭",
+  "Plsss 🥺",
+  "I'm crying 😭",
+  "Last chance 😒",
+  "Ughhh 😒🙄😡"
 ];
 
 const yesBtn = document.getElementById("yes");
@@ -178,13 +195,13 @@ function createHeart(){
 
 /* NO CLICK */
 noBtn.addEventListener("click", ()=>{
-  if(noClicks>=10) return;
+  if(noClicks>=20) return;
   noClicks++;
   noBtn.innerText = messages[noClicks-1];
   yesBtn.style.width = Math.min(220+noClicks*18,window.innerWidth-40)+"px";
   createHeart();
 
-  if(noClicks===10){
+  if(noClicks===20){
     const rect = noBtn.getBoundingClientRect();
     fist.style.display = "block";
     fist.style.setProperty("--hit-x", rect.left+"px");
