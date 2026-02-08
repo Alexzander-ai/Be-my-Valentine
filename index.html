@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Will You Be My Valentine? 💖🥰🌹✨🎉💘💐💕💞</title>
+<title>Will You Be My Valentine? 💖🥰</title>
 
 <style>
 body {
@@ -13,35 +13,39 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center everything vertically */
+    min-height: 100vh;
     overflow-x: hidden;
+    text-align: center;
 }
 
 /* TITLE */
 h1 {
     font-size: 3.2em;
-    margin-top: 40px;
-    text-align: center;
+    margin-bottom: 30px;
 }
 
-/* INITIAL GIF */
-#sadImage {
-    max-width: 95%;      /* Big GIF */
+/* GIFS */
+#sadImage, #finalHappyImage {
+    max-width: 98%;   /* Huge GIFs */
     width: auto;
     height: auto;
     border-radius: 22px;
-    margin-top: 50px;
+    margin: 20px auto;
+    display: block;
 }
 
 /* BUTTON AREA */
 #buttonContainer {
-    margin-top: 90px;
+    margin-top: 40px;
     display: flex;
-    gap: 50px;
+    gap: 30px;
+    justify-content: center;
 }
 
 /* BUTTONS */
 button {
-    font-size: 30px;
+    font-size: 32px;
     padding: 22px 44px;
     border: none;
     border-radius: 14px;
@@ -111,14 +115,6 @@ button {
     100% { transform: translateX(0); }
 }
 
-/* FINAL HAPPY GIF */
-#finalHappyImage {
-    max-width: 95%;   /* Very big happy GIF */
-    width: auto;
-    height: auto;
-    border-radius: 22px;
-    margin-top: 30px;
-}
 </style>
 </head>
 
@@ -130,7 +126,7 @@ button {
 </audio>
 
 <div id="mainContent">
-<h1>Will you be my Valentine? 💖🥰🌹✨🎉💘💐💕💞</h1>
+<h1>Will you be my Valentine? 💖🥰</h1>
 <img src="sad.webp" id="sadImage">
 
 <div id="buttonContainer">
@@ -219,7 +215,7 @@ yesBtn.addEventListener("click", ()=>{
   finalScreen.innerHTML = `
     <h1 style="font-size:5em;">Yahhhh ❤️🌹🥳✨</h1>
     <p style="font-size:3em;">I love you..</p>
-    <img id="finalHappyImage" src="happy.webp" style="margin-top:30px;">
+    <img id="finalHappyImage" src="happy.webp">
     <canvas id="confettiCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;"></canvas>
   `;
   document.body.appendChild(finalScreen);
