@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Will You Be My Valentine? 🌹💖🥰</title>
+<title>Will You Be My Valentine? 💖🥰</title>
 
 <style>
 body {
@@ -25,11 +25,11 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* GIFS */
+/* BIG GIFS */
 #sadImage, #finalHappyImage {
-    max-width: 150%;   /* Huge GIFs */
-    width: auto;
-    height: auto;
+    width: 95%;         /* Huge width */
+    height: 450px;       /* Fixed height */
+    object-fit: cover;   /* Maintain aspect ratio without squishing */
     border-radius: 22px;
     margin: 20px auto;
     display: block;
@@ -114,7 +114,6 @@ button {
     75% { transform: translateX(-10px); }
     100% { transform: translateX(0); }
 }
-
 </style>
 </head>
 
@@ -205,10 +204,8 @@ noBtn.addEventListener("click", ()=>{
 
 /* YES CLICK */
 yesBtn.addEventListener("click", ()=>{
-  // Hide buttons & GIF but keep audio
   mainContent.style.display = "none";
 
-  // Show final screen
   const finalScreen = document.createElement("div");
   finalScreen.style.textAlign="center";
   finalScreen.style.paddingTop="60px";
